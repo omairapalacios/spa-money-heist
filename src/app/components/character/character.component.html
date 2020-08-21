@@ -1,0 +1,24 @@
+<div class="card ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12">
+        <img [src]="character.img" class="img-fluid mt-3 mb-3" [alt]="character.img">
+      </div>
+      <div class="col-lg-8 col-sm-12 p-4">
+          <h4 class="card-title mt-4">{{ character.alias | uppercase }}</h4>
+          <hr>
+          <h5 class="card-title">Nombre real:</h5>
+          <h6 class="card-text"><p class="text-muted"> {{ character.nombre }}</p></h6>
+          <h5 class="card-title">Interprete:</h5>
+          <h6 class="card-text"><p class="text-muted"> {{ character.interprete }}</p></h6>
+          <h5 class="">Descripción del personaje:</h5>
+          <p class="card-text text-justify">{{ character.bio }}</p>
+          <div class="d-flex flex-row-reverse mt-5 pr-5">
+            <a [routerLink]="['/characters']" class="btn btn-outline-danger">Regresar</a>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+

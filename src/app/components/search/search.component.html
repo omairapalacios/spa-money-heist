@@ -1,0 +1,12 @@
+<h1>Buscando: <small> {{ text }} </small></h1>
+<div class="row">
+  <div class="col-md-12" *ngIf="characters.length == 0">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el termino {{ text }}
+    </div>
+  </div>
+</div>
+<div class="card-columns">
+  <!--   *ngFor="let character of characters; let i = index" -->
+<app-character-card *ngFor="let character of characters; let i = index" [character]= "character" [index] = "character.id"></app-character-card>
+</div>

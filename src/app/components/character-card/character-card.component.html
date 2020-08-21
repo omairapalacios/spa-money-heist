@@ -1,0 +1,11 @@
+<div class="card animated fadeIn fast">
+  <h4 class="card-title mt-4 text-center">{{ character.alias | uppercase }}</h4>
+  <img [src]="character.img" class="card-img-top" style="height: 550px;" [alt]="character.alias">
+  <div class="d-flex flex-row-reverse">
+    <button (click)="showCharacter()"
+    type="button" class="btn btn-outline-dark btn-block m-2">
+    Ver más
+  </button>
+  </div>
+  <!-- <a [routerLink]="['/character', i]"  class="btn btn-outline-primary btn-block">Ver más link</a> -->
+</div>

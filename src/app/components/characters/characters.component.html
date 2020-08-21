@@ -1,0 +1,6 @@
+<h5 class="bg-white">Personajes: <small class="text-muted"> Cuarta temporada</small></h5>
+<hr>
+<div class="card-columns">
+<!--   *ngFor="let character of characters; let i = index" -->
+<app-character-card *ngFor="let character of characters; let i = index" [character]= "character" [index] = "i"></app-character-card>
+</div>

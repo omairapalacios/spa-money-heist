@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light border">
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/logo.png" width="52" height="60" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" style="text-transform: uppercase;font-weight: bold;font-size:18px;" [routerLink]="['home']">Inicio</a>
+      </li> 
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link"style="text-transform: uppercase;font-weight: bold;font-size:18px;" [routerLink]="['characters']">Personajes</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link"style="text-transform: uppercase;font-weight: bold;font-size:18px;" [routerLink]="['seasons']">Temporadas</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar personaje" aria-label="Search" (keyup.enter)="searchCharacter(buscarPersonaje.value)"#buscarPersonaje>
+      <button (click) ="searchCharacter(buscarPersonaje.value)"class="btn btn-dark my-2 my-sm-0" type="button">Buscar</button>
+    </form>
+
+  </div>
+</nav>
